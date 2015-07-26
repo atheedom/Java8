@@ -8,9 +8,9 @@ public enum Operation implements OperationStrategy<Double> {
     ADD((x, y) -> x + y),
     SUBTRACT((x, y) -> x - y),
     MULTIPLY((x, y) -> x * y),
-    DIVIDE((x, y) -> x / y);
-
-
+    DIVIDE((x, y) -> x / y),
+    MAX(Double::max);
+    
     private OperationStrategy<Double> operationStrategy;
 
     Operation(final OperationStrategy<Double> operationStrategy) {

@@ -33,4 +33,8 @@ public class OperationStrategyTest {
         assertThat(Operation.DIVIDE.compute(10d, 2d)).isEqualTo(new Double(5d));
     }
 
+    @Test
+    public void shouldDetermineMaximumOfTwoNumbers() {
+        assertThat(Operation.MAX.compute(10d, 5d)).isEqualTo(new Double(10d));
+    }
 }
