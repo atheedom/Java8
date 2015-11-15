@@ -1,6 +1,9 @@
 package com.alextheedom.lambdas;
 
 
+import com.alextheedom.foreach.Consumer;
+
+import java.util.ConcurrentModificationException;
 import java.util.Random;
 
 public class UserTestData {
@@ -12,5 +15,11 @@ public class UserTestData {
     public static void main(String[] args) {
         Random random = new Random();
         new StubService(() -> EXAMPLE_HANDLES[random.nextInt(27)]).run();
+        new StubService(() -> "rjhjgjhgjgjrr").run();
+        new StubService(() ->
+
+                Consumer.toUpperAndReverse("")
+
+        ); //.run();
     }
 }
